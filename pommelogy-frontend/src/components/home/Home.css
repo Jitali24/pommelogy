@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* General container styles */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  overflow: hidden;
+  padding: 20px;
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+  color: white; /* Default text color */
+}
+
+/* Light theme */
+.home-container.light {
+  background-image: url(../../assets/home-background-light.png);
+  color: black; /* Text color for light theme */
+}
+
+.home-container.light .subtitle {
+  font-weight: 500;
+}
+
+.home-container.light .button {
+  background: black;
+  color: white;
+  font-weight: 500;
+}
+
+.home-container.light .button.primary {
+  border: 1.5px solid black;
+  background: white;
+  color: black;
+  font-weight: 500;
+}
+
+.home-container.light .btn-secondary {
+  color: rgb(50, 50, 50);
+  font-weight: 500;
+}
+
+/* Dark theme */
+.home-container.dark {
+  background-image: url(../../assets/home-background.jpg);
+  color: white; /* Text color for dark theme */
+}
+
+.home-container.dark .button {
+  background: white;
+  color: black;
+}
+
+.home-container.dark .button.primary {
+  border: 1px solid white;
+  background: black;
+  color: white;
+}
+
+.home-container.dark .btn-secondary {
+  color: rgb(165, 165, 165); /* Color for secondary buttons in dark theme */
+}
+
+.home-container .apple-detail .cta-img {
+  margin: 0 auto;
+}
+
+/* Background video styles */
+.backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Content styles */
+.content {
+  max-width: 40%;
+  margin-inline-end: auto;
+  margin-block: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  margin-top: 100px;
+  z-index: 1;
+  line-height: 1.1;
+  padding: 1rem;
+}
+
+/* Title and subtitle styles */
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+/* Button styles */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.btn-secondary {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.btn-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.uploaded-image-preview {
+  margin: 1em;
+  border-radius: 0.5em;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.button.primary {
+  border: 1px solid;
+}
+
+.button.primary:hover {
+  transform: translateY(-7px);
+  cursor: pointer;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: translateY(-7px);
+}
+
+.home-container .home-modal-body {
+  padding: 0;
+  text-align: center;
+}
+
+.home-container .home-modal-header {
+  padding: auto;
+}
+
+.home-container closebutton {
+  margin-left: -5%;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .buttons,
+  .btn-secondary {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    max-width: 80%;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .button,
+  .btn-secondary {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    max-width: 90%;
+    margin-top: 50%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .buttons,
+  .btn-secondary {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .button,
+  .btn-secondary {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

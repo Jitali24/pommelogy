@@ -1,0 +1,203 @@
+/* General styles */
+.header {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  background: var(--header-bg-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: auto;
+  height: 50px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav ul li {
+  margin-left: 1rem;
+}
+
+.header-nav ul li a {
+  color: var(--header-text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.header-nav ul li a:hover {
+  color: #de564a;
+}
+
+.header-nav ul li .active {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #de564a;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.header-icons input {
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.header-icons a {
+  color: var(--header-text-color);
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.header-icons a:hover {
+  color: #de564a;
+}
+
+.header-icons a img {
+  width: 25px;
+  height: 25px;
+}
+
+.header-icons i {
+  color: var(--header-text-color);
+  margin-right: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.header-icons i:hover {
+  color: #ddd;
+}
+
+.sidepanel {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  background: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  margin-top: auto;
+}
+
+.sidepanel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #de564a;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-size: 36px;
+  border-radius: 0;
+  color: white;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--header-text-color);
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #333;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+}
+
+.theme-toggle-btn img {
+  height: 1.5rem;
+}
+
+.theme-toggle-btn:hover {
+  text-decoration: none;
+}
+
+body.dark {
+  --header-bg-color: black;
+  --header-text-color: white;
+}
+
+:root {
+  --header-bg-color: white;
+  --header-text-color: black;
+}
+
+:root .header-nav ul li a {
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .sidepanel ul {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20%;
+  }
+
+  .sidepanel ul li {
+    margin: 5px 0;
+  }
+}

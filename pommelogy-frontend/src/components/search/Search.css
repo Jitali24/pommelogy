@@ -1,0 +1,320 @@
+/* Light theme styles */
+.search-container.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.search-container.light .search-bar {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.search-container.light .search-table th {
+  background-color: #f2f2f2;
+}
+
+.search-container.light .export-buttons button {
+  background-color: #333;
+  color: white;
+}
+
+.search-container.light .pagination button {
+  background-color: #333;
+  color: white;
+}
+
+/* Dark theme styles */
+.search-container.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.search-container.dark .search-bar {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.search-container.dark .search-bar::placeholder {
+  color: white;
+}
+
+.search-container.dark .search-table th {
+  background-color: #333;
+}
+
+.search-container.dark .search-table th,
+.search-container.dark .search-table td {
+  border: 1px solid #444;
+}
+
+.search-container.dark .export-buttons button {
+  background-color: #333;
+  color: #ffffff;
+  border: 1px solid white;
+}
+
+.search-container.dark .export-buttons button:hover {
+  background-color: transparent;
+}
+
+.search-container.dark .pagination button {
+  background-color: #444;
+  color: white;
+  border: 1px solid white;
+}
+
+.search-container.dark .pagination button:hover {
+  background-color: transparent;
+}
+
+.search-container.dark .pagination button:disabled {
+  display: none;
+}
+
+.search-container.dark .pagination .entries-per-page select {
+  background-color: #444;
+  color: white;
+}
+
+/* General styles */
+.search-container {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+}
+
+/* Banner styles */
+.search-banner {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.search-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(35, 35, 35, 0.8);
+  border: 1px solid #ccc;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+.search-head {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  justify-content: center;
+}
+
+.search-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.search-instruction {
+  font-size: 45px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.search-bar {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 100%;
+}
+
+.search-heading {
+  margin: 20px 0;
+}
+
+.table-wrapper {
+  width: 95%;
+  margin: 20px auto;
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.search-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.search-table th,
+.search-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.search-table th {
+  background-color: #f2f2f2;
+  font-size: 14px;
+}
+
+.search-table .col-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.search-table .col-head img:hover {
+  cursor: pointer;
+}
+
+.export-buttons {
+  margin: 20px 0;
+}
+
+.export-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  background: #333;
+  color: white;
+  font-weight: bold;
+}
+
+.export-buttons button:hover {
+  background-color: #0056b3;
+  background: transparent;
+  border: 2px solid #333;
+  color: #333;
+  font-weight: bold;
+}
+
+.pagination {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.pagination .entries-per-page {
+  margin-right: auto;
+}
+
+.pagination .entries-per-page select {
+  padding: 2px 5px;
+}
+
+.pagination button {
+  padding: 2px 8px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  font-weight: bolder;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination button:hover {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.table-bottom {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.pagination .entries-per-page select {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 2px 5px;
+}
+
+.pagination .entries-per-page select:hover {
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .search-instruction {
+    font-size: 36px;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .header1 {
+    padding: 20px;
+    font-size: 18px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-banner-image {
+    height: 100vh;
+  }
+
+  .search-instruction {
+    font-size: 28px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .search-banner {
+    height: auto;
+  }
+
+  .table-wrapper {
+    overflow-x: auto; /* Ensure table is scrollable */
+  }
+
+  .search-table {
+    width: 1500px; /* Set a larger width to enable horizontal scrolling */
+  }
+
+  .pagination {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    gap: 0.5rem;
+  }
+
+  .pagination-btns {
+    flex-direction: row;
+  }
+
+  .pagination .entries-per-page {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}

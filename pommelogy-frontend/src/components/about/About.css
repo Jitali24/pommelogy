@@ -1,0 +1,300 @@
+/* General Styles */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+}
+
+/* Light Theme */
+.about-container.light {
+  background: white;
+  color: black;
+}
+
+.about-container.light .banner-content {
+  width: 30%;
+}
+
+.about-container.light .banner h1,
+.about-container.light .banner p {
+  color: black;
+}
+
+/* .about-container.light .team-card {
+  background-color: #f0f0f0;
+} */
+
+/* Dark Theme */
+.about-container.dark {
+  background: black;
+  color: white;
+}
+
+.about-container .banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.about-container .banner-image {
+  width: 100vw;
+  height: 100vh; /* Ensure the banner image covers full viewport height */
+  object-fit: cover;
+}
+
+.about-container .banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  background: none;
+}
+
+.about-container .banner h1,
+.about-container .banner p {
+  margin: 10px 0;
+}
+
+.about-container .banner h1 {
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.about-container .banner p {
+  font-size: 24px;
+}
+
+.about-content {
+  max-width: 80%;
+  margin: 10px auto; /* Reduced margin at the start of content */
+}
+
+.about-content h4 {
+  font-weight: bold;
+}
+
+.about-content p,
+.about-content ul li {
+  font-size: 20px;
+  list-style-type: disc;
+}
+
+.about-content h4,
+.about-content p,
+.about-content ul {
+  margin: 10px 0; /* Reduced margin at the start of content */
+}
+
+.team-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.team-card {
+  background: var(--team-card-bg);
+  color: var(--team-card-text);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 300px;
+  height: 350px;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; /* Ensure flex direction is column */
+}
+
+.team-photo {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #212529;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.team-card:hover .team-info {
+  opacity: 1;
+}
+
+.team-card h5 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.team-card h6 {
+  font-size: 1em;
+  margin: 5px 0;
+  font-style: italic;
+}
+
+.team-card p {
+  font-size: 0.9em;
+  font-size: 16px;
+}
+
+/* Theme Variables */
+body.dark {
+  --team-card-bg: #212529;
+  --team-card-text: white;
+}
+
+:root {
+  --team-card-bg: #333;
+  --team-card-text: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .banner-content {
+    width: 80%;
+  }
+
+  .banner h1 {
+    font-size: 50px;
+  }
+
+  .banner p {
+    font-size: 24px;
+  }
+
+  .about-content {
+    max-width: 90%;
+  }
+
+  .team-card {
+    max-width: 45%;
+  }
+
+  .team-photo {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .banner-content {
+    width: 90%;
+  }
+
+  .banner h1 {
+    font-size: 40px;
+  }
+
+  .banner p {
+    font-size: 20px;
+  }
+
+  .team-card {
+    max-width: 100%;
+  }
+
+  .team-photo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-content {
+    width: 95%;
+  }
+
+  .banner h1 {
+    font-size: 30px;
+  }
+
+  .banner p {
+    font-size: 18px;
+  }
+
+  .about-content p,
+  .about-content ul li {
+    font-size: 18px;
+  }
+
+  .team-container {
+    flex-direction: column; /* Stack team cards vertically on small screens */
+    align-items: center;
+  }
+
+  .team-card {
+    padding: 10px;
+    height: auto;
+    width: -webkit-fill-available;
+  }
+
+  .team-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team-card h5 {
+    font-size: 1em;
+  }
+
+  .team-card h6 {
+    font-size: 0.9em;
+  }
+
+  .team-card p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner h1 {
+    font-size: 26px;
+  }
+
+  .banner p {
+    font-size: 18px;
+  }
+
+  .about-content p,
+  .about-content ul li {
+    font-size: 16px;
+  }
+
+  .team-photo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  .team-card p {
+    font-size: 0.6em;
+  }
+}
